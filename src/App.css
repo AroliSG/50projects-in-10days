@@ -5,11 +5,84 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+
 }
-@keyframes App-logo-spin {
+
+.navbar {
+  background-color: #5865F2;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 10px;
+}
+
+.Logo {
+  padding-left: 10px;
+  font-weight: bold;
+  font-size: 2.5vh;
+}
+
+.fa-github:hover, .Logo:hover {
+  color:#282c34
+}
+
+.fa-bars {
+  padding-right: 10px;
+}
+
+.fa-bars:active {
+  color: #282c34;
+}
+
+.dropList {
+  position: absolute;
+  background-color: #5865F2;
+  overflow-y: scroll;
+  max-height: 50vh;
+  align-self: flex-end;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.drop-title-container {
+  margin: 5px;
+  cursor: pointer;
+}
+
+.drop-title-container:active {
+  color: #282c34;
+}
+
+.drop-title {
+  font-size: 2vh;
+  margin: 0px;
+  padding-inline: 15px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #5865F2;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #282c34;
+}
+
+
+.container-outlet {
+ 
+}
+
+@keyframes fa-github {
   from {
     transform: rotate(0deg);
   }

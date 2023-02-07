@@ -6,13 +6,6 @@ In this project we are going to be creating 10 different projects between 10days
 
 List
 
-#	Project	| Demo |
-| Projects | Page Test |
-|----------|-----------|
-|          |           |
-|          |           |
-|          |           |
-
 | #  |         Projects                | Page |
 |----|---------------------------------|------|
 | 01 |       Expanding Cards           | Demo |
@@ -69,11 +62,7 @@ List
 | 50 |	    Inspired by [Brad Tra.](https://github.com/bradtraversy/50projects50days)       | :D |
 
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+# Getting Started with React App
 
 In the project directory, you can run:
 
