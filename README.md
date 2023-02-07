@@ -63,3 +63,5 @@ List
 | 48 |	    Random Image Feed	       | Demo |
 | 49 |	    Todo List	               | Demo |
 | 50 |	    Insect Catch Game	       | Demo |
+|----|---------------------------------|------|
+| 50 |	    Inspired by [sdsd](https://github.com/bradtraversy/50projects50days)       | Demo |
