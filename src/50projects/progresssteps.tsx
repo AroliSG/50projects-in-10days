@@ -5,23 +5,22 @@ import React, {
 } from 'react';
 
 let lastTypeAim: string;
-let lastWidth: number;
 const ProgressStepsView = () => {
     const [getIndexMethod, setIndexMethod]      = useState (0);
     const [getSwatches, setSwatches]            = useState (4);
     const [getSliderSize, setSliderSize]        = useState (400);
     const [getTotalWidth, setTotalWidth]        = useState (0);
 
-    const styles = {
+    const styles: { [key: string]: React.CSSProperties } = {
         container: {
             display: 'flex',
             flexDirection: 'column',
             alignItems: "center",
             height: "100%",
-        } as CSSProperties,
+        },
         button_container: {
             alignSelf: "center"
-        } as CSSProperties,
+        },
         buttons: {
             margin: 5,
             padding: 15,
@@ -29,14 +28,14 @@ const ProgressStepsView = () => {
             fontSize: "2.5vh",
             backgroundColor: "#5865F2",
             borderRadius: 15
-        } as CSSProperties,
+        },
         slider: {
             position: "relative",
             height: 5,
             width: getSliderSize,
             backgroundColor: "white",
             marginBottom: 15
-        } as CSSProperties,
+        },
         steps: {
             display: 'flex',
             height: "1.5vw",
@@ -47,7 +46,28 @@ const ProgressStepsView = () => {
             top: "-.65vw",
             justifyContent: "center",
             alignItems: "center",
-        } as CSSProperties
+        },
+        inputs_container: {
+            marginBottom: "55px",
+            backgroundColor: "#5865F2",
+            padding: '10px',
+            borderRadius: 15
+        },
+        inputs: {
+            borderRadius: 5,
+            backgroundColor: "#282c34",
+            color: 'white'
+        },
+        div_container: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: "center",
+        },
+        Label: {
+            fontSize: '15px',
+            paddingRight: "10px",
+            margin: "5px"
+        }
     }
 
     useEffect (() => {
@@ -64,21 +84,55 @@ const ProgressStepsView = () => {
             }
             const elementWidth = element[0].style.width;
             if (lastTypeAim === "left")  {
-                element[0].style.width = getTotalWidth - startStamp +  "px";
+                element[0].style.width = original_left - startStamp +  "px";
             }
             if (lastTypeAim === "right") {
-                element[0].style.width = getTotalWidth + startStamp +  "px";
+                element[0].style.width = original_right + startStamp +  "px";
             }
 
             setTotalWidth (parseInt (elementWidth, 10));
         }
         window.requestAnimationFrame(step);
-    }, [
-        getIndexMethod]);
+    }, [getIndexMethod]);
 
     return (
         <div style={styles.container}>
             <p>Progress Steps</p>
+            <div
+                style={styles.inputs_container}
+            >
+                <div style={styles.div_container}>
+                    <p style={styles.Label}>Slider Size</p>
+                    <input
+                        type        = {"number"}
+                        value       = {getSliderSize}
+                        style       = {styles.inputs}
+                        onChange    = {evt => {
+                                // if it is empty means 0
+                            if (evt.target.value === '') evt.target.value = "0";
+
+                                // saving it
+                            setSliderSize (parseInt (evt.target.value, 10))
+                        }}
+                    />
+                </div>
+                <div style={styles.div_container}>
+                    <p style={styles.Label}>Swaps Count</p>
+                    <input
+                        type        = {"number"}
+                        value       = {getSwatches}
+                        style       = {styles.inputs}
+                        onChange    = {evt => {
+                                // if it is empty means 0
+                            if (evt.target.value === '') evt.target.value = "0";
+
+                                // saving it
+                            setSwatches (parseInt (evt.target.value, 10))
+                        }}
+                    />
+                </div>
+            </div>
+
             <div style={styles.slider}>
                     {/* tracking line */}
                 <div
