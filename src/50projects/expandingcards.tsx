@@ -7,8 +7,6 @@ type ImageProps = {
 const FRAMES_LIMIT = 65;
 const GUI_SIZE     = 5;
 
-
-
 const ExpandingCardsView = () => {
     const [getFrameRate, setFrameRate]  = useState (FRAMES_LIMIT);
     const [getGUISize, setGUISize]      = useState (GUI_SIZE);
@@ -74,13 +72,13 @@ const ExpandingCardsView = () => {
         let element         = document.getElementsByClassName ('img-expanding') as HTMLCollectionOf<HTMLElement>;
         let elementLabel    = document.getElementsByClassName ('imgLabel') as HTMLCollectionOf<HTMLElement>;
 
-        let startStamp = 0;
+        let frames = 0;
         let opacity    = 0;
 
         function step() {
-            startStamp++;
+            frames++;
                 // repeating/limit
-            if (startStamp < getFrameRate) window.requestAnimationFrame(step);
+            if (frames < getFrameRate) window.requestAnimationFrame(step);
 
                 // looping through elements
             for (let item in element) {
@@ -98,7 +96,7 @@ const ExpandingCardsView = () => {
                         setImg (getImgData);
 
                         elementLabel[parseInt (getImg?.last,10)].style.opacity = `0`;
-                        element[parseInt (getImg?.last,10)].style.width = `${(getFrameRate+getGUISize)-startStamp}vw`;
+                        element[parseInt (getImg?.last,10)].style.width = `${(getFrameRate+getGUISize)-frames}vw`;
                     }
                         /*
                             * Increasing method
@@ -106,8 +104,8 @@ const ExpandingCardsView = () => {
                         */
 
                     else if (getImg?.id === item) {
-                        if (startStamp%8===0) opacity += 0.1;
-                        elementTouched.style.width = `${startStamp}vw`;
+                        if (frames%8===0) opacity += 0.1;
+                        elementTouched.style.width = `${frames}vw`;
                         elementLabel[parseInt (getImg?.id,10)].style.opacity = `${opacity}`
                     }
 
@@ -119,7 +117,7 @@ const ExpandingCardsView = () => {
 
                     else if (getImg?.last !== undefined && getImg?.last !== getImg?.id) {
                         elementLabel[parseInt (getImg?.last,10)].style.opacity = `0`;
-                        element[parseInt (getImg?.last,10)].style.width = `${(getFrameRate+getGUISize)-startStamp}vw`;
+                        element[parseInt (getImg?.last,10)].style.width = `${(getFrameRate+getGUISize)-frames}vw`;
                     }
                 }
             }

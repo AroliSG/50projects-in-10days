@@ -1,24 +1,19 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import './App.css';
+import {
+  useCallback,
+  useEffect,
+  useState
+} from 'react';
+
 import {
   Routes,
   Route,
   Outlet,
 } from "react-router-dom";
-import expandingcards from './50projects/expandingcards';
-import progresssteps from './50projects/progresssteps';
 
 import ErrorMessage from './errorMessage';
-import './App.css';
 import Dashboard from './Dashboard';
-
-
-const List: {
-  name: string,
-  Element: any
-}[] = [
-  { name: 'Expanding Cards', Element: expandingcards },
-  { name: 'Progress Steps', Element: progresssteps },
-]
+import Projects from './projectList';
 
 function App() {
   useEffect (() => {
@@ -29,7 +24,7 @@ function App() {
     <Routes>
     <Route path="/" element = {<Navbar />} >
     <Route index element = {<Dashboard/>} />
-      {List.map (list => {
+      {Projects.map (list => {
         const dir = list.name.replace (' ', '').toLocaleLowerCase ();
 
         return (
@@ -70,20 +65,20 @@ const Navbar = () => {
         {dropState ? <div className='dropList' style={{
           top: height-5
         }}>
-          {List.map ((list, index) => {
+          {Projects.map ((list, index) => {
               // drop down
             return (
               <div className = 'drop-title-container'
                 style = {{
                   paddingTop: index === 0 ? "10px" : 0,
-                  paddingBottom: (index+1) === List.length ? "5px" : 0
+                  paddingBottom: (index+1) === Projects.length ? "5px" : 0
                 }}
                 onClick = {() => {
                   const dir = list.name.replace (' ', '').toLocaleLowerCase ();
                   window.location.href = dir;
                 }}
               >
-                <p className = 'p drop-title'>{list.name}</p>
+                <p className = 'p drop-title'>{index+1} {list.name}</p>
               </div>
             );
           })}
@@ -92,7 +87,6 @@ const Navbar = () => {
       <div className='container-outlet'>
         <Outlet />
       </div>
- 
     </div>
   );
 }

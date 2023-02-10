@@ -9,9 +9,10 @@ const ProgressStepsView = () => {
     const [getIndexMethod, setIndexMethod]      = useState (0);
     const [getSwatches, setSwatches]            = useState (4);
     const [getSliderSize, setSliderSize]        = useState (400);
-    const [getTotalWidth, setTotalWidth]        = useState (0);
+    const [getAnimReached, setAnimReached]      = useState (false);
+  //  const [getTotalWidth, setTotalWidth]        = useState (0);
 
-    const styles: { [key: string]: React.CSSProperties } = {
+    const styles: { [key: string]: CSSProperties } = {
         container: {
             display: 'flex',
             flexDirection: 'column',
@@ -71,26 +72,25 @@ const ProgressStepsView = () => {
     }
 
     useEffect (() => {
-        let startStamp = 0;
+        let frames = 0;
         let element         = document.getElementsByClassName ('track') as HTMLCollectionOf<HTMLElement>;
 
         function step () {
             const original_right  = (getSliderSize/(getSwatches-1)) * (getIndexMethod-1);
             const original_left  = (getSliderSize/(getSwatches-1)) * (getIndexMethod+1);
-            startStamp++;
+            frames++;
                 // repeating
-            if (startStamp < getSliderSize/(getSwatches-1)) {
+            if (frames < getSliderSize/(getSwatches-1)) {
                 window.requestAnimationFrame(step);
             }
-            const elementWidth = element[0].style.width;
-            if (lastTypeAim === "left")  {
-                element[0].style.width = original_left - startStamp +  "px";
+            else {
+                setAnimReached (true);
             }
-            if (lastTypeAim === "right") {
-                element[0].style.width = original_right + startStamp +  "px";
-            }
+                //  const elementWidth = element[0].style.width;
+            if (lastTypeAim === "left")  element[0].style.width = original_left - frames +  "px";
+            if (lastTypeAim === "right") element[0].style.width = original_right + frames +  "px";
 
-            setTotalWidth (parseInt (elementWidth, 10));
+           // setTotalWidth (parseInt (elementWidth, 10));
         }
         window.requestAnimationFrame(step);
     }, [getIndexMethod]);
@@ -146,12 +146,19 @@ const ProgressStepsView = () => {
                 />
                 {
                 Array (getSwatches).fill (null).map ((_,index) => {
+                        // getting specific border for each swap when toggling between swaps
+                    const getSpecificBorderOnTime = () => {
+                        if (getIndexMethod >= index && getAnimReached) return 5;
+                        else if (getIndexMethod > index || index === 0) return 5;
+                        else return 15;
+                    }
+
                     return (
                         <div style={{
                             display: 'flex',
                             height: 25,
                             width: 25,
-                            borderRadius: 15,
+                            borderRadius: getSpecificBorderOnTime (),
                             backgroundColor: "#5865F2",
                             position: "absolute",
                             top: -25/2,
@@ -173,12 +180,19 @@ const ProgressStepsView = () => {
                 <button
                     style   = {styles.buttons}
                     onMouseDown = {evt => {
+                            // anim just started, we must wait to end to reproduce the swap border size changing
+                        setAnimReached (false);
+
+                            // aiming
                         lastTypeAim = "left";
+
+                            // counting swatches -> decreasing
                         setIndexMethod (n => {
                             if (n === 0) return 0;
                             return n-1;
                         });
 
+                            // button opacity
                         evt.currentTarget.style.opacity = ".5";
                     }}
                     onMouseUp   = {evt => evt.currentTarget.style.opacity = "1"}
@@ -187,12 +201,19 @@ const ProgressStepsView = () => {
                 <button
                     style   = {styles.buttons}
                     onMouseDown = {evt => {
+                            // anim just started, we must wait to end to reproduce the swap border size changing
+                        setAnimReached (false);
+
+                            // aiming
                         lastTypeAim = "right";
+
+                            // counting swatches -> increasing
                         setIndexMethod (n => {
                             if (n === (getSwatches-1)) return (getSwatches-1);
                             return n+1;
                         });
 
+                            // button opacity
                         evt.currentTarget.style.opacity = ".5";
                     }}
                     onMouseUp   = {evt => evt.currentTarget.style.opacity = "1"}
