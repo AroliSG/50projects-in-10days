@@ -1,13 +1,12 @@
 import { CSSProperties, useState } from "react";
 import useSound from 'use-sound';
-import tracks from './musics.json';
+import tracks from './json/musics.json';
 
 type makerProps = {
     url: string,
     name: string,
     onClick: () => void,
 }
-
 
 //const TRACKS_LIMIT = 22577;
 

@@ -2,7 +2,7 @@ import {
     CSSProperties, useEffect, useState
 } from "react";
 
-import article from './articles.json';
+import article from './json/articles.json';
 
 const RotatingNavigation = () => {
     const [getAnimType, setAnimType]            = useState <number|null>(null);
