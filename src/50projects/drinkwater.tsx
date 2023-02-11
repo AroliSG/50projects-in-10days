@@ -92,7 +92,6 @@ const DrinkWater = () => {
                 // if element was double clicked with must change the background to white
             if (i === index && mini_bottle[i].style.backgroundColor === WATER_COLOR) {
                mini_bottle[i].style.height = "0%";
-
                mini_bottle[i].style.backgroundColor = "white";
             }
 
