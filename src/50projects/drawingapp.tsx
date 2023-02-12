@@ -45,7 +45,7 @@ const DrawingApp = () => {
     const drawLine = (evt: MouseEvent) => {
         const canvas    = document.getElementsByClassName ('canvas') as HTMLCollectionOf <HTMLElement>;
         const rect      = canvas[0].getBoundingClientRect ();
-
+        const cursorOffset = 40;
         let point       = document.createElement('span');
 
         point.setAttribute('class','message');
@@ -55,8 +55,8 @@ const DrawingApp = () => {
         point.style.color = 'black';
         point.style.fontSize = `${getBrushSize}vw`
         point.style.pointerEvents = 'none'
-        point.style.top = `${evt.pageY-rect.top}px`;
-        point.style.left = `${evt.pageX-rect.left}px`;
+        point.style.top = `${evt.pageY-rect.top-cursorOffset}px`;
+        point.style.left = `${evt.pageX-rect.left+((rect.width/2)+cursorOffset)}px`;
 
         const top_limiter = evt.pageY > rect.top;
         const bottom_limiter = evt.pageY < rect.width + rect.top;
