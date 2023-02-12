@@ -16,6 +16,12 @@ import RandomChoicePicker from './50projects/randomchoisespicker';
 import AnimatedNavigation from './50projects/animatednavigation';
 import IncrementingCounter from './50projects/Incrementingcounter';
 import DrinkWater from './50projects/drinkwater';
+import MovieApp from './50projects/movieapp';
+import backgroundSlider from './50projects/backgroundslider';
+import ThemeClock from './50projects/themeclock';
+import RippleEffect from './50projects/rippleeffect';
+import DragDrop from './50projects/dragndrop';
+import DrawingApp from './50projects/drawingapp';
 
 const Projects: {
     name: string,
@@ -37,6 +43,12 @@ const Projects: {
     { name: 'Animated Navigation', Element: AnimatedNavigation },
     { name: 'Incrementing Counter', Element: IncrementingCounter },
     { name: 'Drink Water', Element: DrinkWater },
+    { name: 'Movie App', Element: MovieApp },
+    { name: 'Background Slider', Element: backgroundSlider },
+    { name: 'Theme Clock', Element: ThemeClock },
+    { name: 'Ripple Effect', Element: RippleEffect },
+    { name: 'Drag N Drop', Element: DragDrop },
+    { name: 'Drawing App', Element: DrawingApp },
 ]
 
 export default Projects;
