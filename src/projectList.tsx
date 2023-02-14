@@ -22,6 +22,7 @@ import ThemeClock from './50projects/themeclock';
 import RippleEffect from './50projects/rippleeffect';
 import DragDrop from './50projects/dragndrop';
 import DrawingApp from './50projects/drawingapp';
+import KineticLoader from './50projects/kineticloader';
 
 const Projects: {
     name: string,
@@ -49,6 +50,7 @@ const Projects: {
     { name: 'Ripple Effect', Element: RippleEffect },
     { name: 'Drag N Drop', Element: DragDrop },
     { name: 'Drawing App', Element: DrawingApp },
+    { name: 'Kinetic', Element: KineticLoader },
 ]
 
 export default Projects;
