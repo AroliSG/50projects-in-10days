@@ -23,6 +23,7 @@ import RippleEffect from './50projects/rippleeffect';
 import DragDrop from './50projects/dragndrop';
 import DrawingApp from './50projects/drawingapp';
 import KineticLoader from './50projects/kineticloader';
+import ContentPlaceholder from './50projects/contentplaceholder';
 
 const Projects: {
     name: string,
@@ -50,7 +51,8 @@ const Projects: {
     { name: 'Ripple Effect', Element: RippleEffect },
     { name: 'Drag N Drop', Element: DragDrop },
     { name: 'Drawing App', Element: DrawingApp },
-    { name: 'Kinetic', Element: KineticLoader },
+    { name: 'Kinetic Loader', Element: KineticLoader },
+    { name: 'Content Placeholder', Element: ContentPlaceholder },
 ]
 
 export default Projects;

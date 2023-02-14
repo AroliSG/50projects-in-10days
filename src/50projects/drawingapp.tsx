@@ -42,10 +42,10 @@ const DrawingApp = () => {
         }
     }
 
-    const drawLine = (evt: MouseEvent) => {
+    const moveIt = (evt: MouseEvent) => {
         const canvas    = document.getElementsByClassName ('canvas') as HTMLCollectionOf <HTMLElement>;
         const rect      = canvas[0].getBoundingClientRect ();
-        const cursorOffset = 40;
+
         let point       = document.createElement('span');
 
         point.setAttribute('class','message');
@@ -73,9 +73,9 @@ const DrawingApp = () => {
     }
 
     useEffect (() => {
-        document.addEventListener ('mousemove', drawLine);
+        document.addEventListener ('mousemove', moveIt);
         return () => {
-            document.removeEventListener ('mousemove', drawLine);
+            document.removeEventListener ('mousemove', moveIt);
         }
     }, [getClickEvent, getBrushSize]);
 
