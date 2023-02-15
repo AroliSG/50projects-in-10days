@@ -24,6 +24,13 @@ import DragDrop from './50projects/dragndrop';
 import DrawingApp from './50projects/drawingapp';
 import KineticLoader from './50projects/kineticloader';
 import ContentPlaceholder from './50projects/contentplaceholder';
+import StickyBar from './50projects/stickynav';
+import DoubleSlider from './50projects/doubleslider';
+import ToastNotification from './50projects/toastnotification';
+import GithubProfiles from './50projects/githubprofiles';
+import DoubleClickHeart from './50projects/doubleclickheart';
+import AutoTextEffect from './50projects/autotexteffect';
+import PasswordGenerator from './50projects/passwordgenerator';
 
 const Projects: {
     name: string,
@@ -53,6 +60,13 @@ const Projects: {
     { name: 'Drawing App', Element: DrawingApp },
     { name: 'Kinetic Loader', Element: KineticLoader },
     { name: 'Content Placeholder', Element: ContentPlaceholder },
+    { name: 'Sticky Nav', Element: StickyBar },
+    { name: 'Double Slider', Element: DoubleSlider },
+    { name: 'Toast Notification', Element: ToastNotification },
+    { name: 'Github Profiles', Element: GithubProfiles },
+    { name: 'Double Click Heart', Element: DoubleClickHeart },
+    { name: 'Auto Text Effect', Element: AutoTextEffect },
+    { name: 'Password', Element: PasswordGenerator },
 ]
 
 export default Projects;

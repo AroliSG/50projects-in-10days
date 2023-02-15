@@ -80,7 +80,7 @@ const RandomUser = () => {
                 setDataUpdated (res.data.results[0]);
                 default_item (res.data.results[0].name.first, res.data.results[0].name.last, "Hi, my name is");
 
-                document.getElementsByClassName ("json")[0].innerHTML = "<pre>"+JSON.stringify(res.data.results[0] ,undefined, 2) +"</pre>"
+                document.getElementsByClassName ("json")[0].innerHTML = "<pre>"+JSON.stringify(res.data.results[0], undefined, 2) +"</pre>"
             });
     }, [getForceReload]);
 
