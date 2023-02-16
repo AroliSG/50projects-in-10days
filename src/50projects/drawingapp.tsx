@@ -42,7 +42,7 @@ const DrawingApp = () => {
         }
     }
 
-    const moveIt = (evt: MouseEvent) => {
+    const moveIt =  (evt: MouseEvent) => {
         const canvas    = document.getElementsByClassName ('canvas') as HTMLCollectionOf <HTMLElement>;
         const rect      = canvas[0].getBoundingClientRect ();
 
@@ -77,6 +77,8 @@ const DrawingApp = () => {
         return () => {
             document.removeEventListener ('mousemove', moveIt);
         }
+
+        // eslint-disable-next-line
     }, [getClickEvent, getBrushSize]);
 
     return (

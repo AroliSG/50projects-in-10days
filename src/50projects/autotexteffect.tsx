@@ -1,10 +1,10 @@
 import { CSSProperties, useEffect, useState } from "react";
 
-
 const originalText = 'We Love Programming!!';
+
 const AutoTextEffect = () => {
-    const [getLabel, setLabel] = useState ('W');
-    const [getSpeedNumber, setSpeedNumber] = useState (10);
+    const [getLabel, setLabel]              = useState ('W');
+    const [getSpeedNumber, setSpeedNumber]  = useState (10);
 
     const styles: {[key:string]:CSSProperties} = {
         container: {
@@ -36,7 +36,7 @@ const AutoTextEffect = () => {
     useEffect (() => {
         const interval = setInterval (() => {
             setLabel (label => {
-                label = originalText.slice (0,label.length+1);
+                label = originalText.slice (0, label.length+1);
                 if (label.length === originalText.length) return 'W';
                 return label;
             })

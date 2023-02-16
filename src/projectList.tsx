@@ -31,6 +31,9 @@ import GithubProfiles from './50projects/githubprofiles';
 import DoubleClickHeart from './50projects/doubleclickheart';
 import AutoTextEffect from './50projects/autotexteffect';
 import PasswordGenerator from './50projects/passwordgenerator';
+import GoodCheapFast from './50projects/good-cheap-fast';
+import NoteApp from './50projects/noteapp';
+import AnimatedCountDown from './50projects/animatedcountdown';
 
 const Projects: {
     name: string,
@@ -66,7 +69,10 @@ const Projects: {
     { name: 'Github Profiles', Element: GithubProfiles },
     { name: 'Double Click Heart', Element: DoubleClickHeart },
     { name: 'Auto Text Effect', Element: AutoTextEffect },
-    { name: 'Password', Element: PasswordGenerator },
+    { name: 'Password Generator', Element: PasswordGenerator },
+    { name: 'G,C,F', Element: GoodCheapFast },
+    { name: 'Note App', Element: NoteApp },
+    { name: 'Animated Count Down', Element: AnimatedCountDown },
 ]
 
 export default Projects;

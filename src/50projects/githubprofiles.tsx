@@ -3,75 +3,57 @@ import { CSSProperties, useEffect, useState } from "react";
 
 const GITHUB_API = 'https://api.github.com/users'
 
-type axiosTypes = {
-    login: string,
-    id: number,
-    node_id: string,
-    avatar_url: string,
-    gravatar_id: string,
-    url: string,
-    html_url: string,
-    followers_url: string,
-    following_url: string,
-    gists_url: string,
-    starred_url: string,
-    subscriptions_url: string,
-    organizations_url: string,
-    repos_url: string,
-    events_url:string,
-    received_events_url: string,
-    type: string,
-    site_admin: false,
-    name:string,
-    company?:string,
-    blog?:string,
-    location?:string,
-    email?:string,
-    hireable?:string,
-    bio:string,
-    twitter_username?:string,
-    public_repos: number,
-    public_gists:number,
-    followers:number,
-    following:number,
-    created_at:string,
-    updated_at:string,
+type axiosDataTypes = {
+    user: {
+        login: string;
+        id: number;
+        avatar_url: string;
+        name: string;
+        followers: number;
+        following: number;
+        public_repos: number;
+        bio: string;
+        created_at: string;
+    },
+    repos: {
+        name: string
+    }[]
 }
 
 const GithubProfiles = () => {
+    const [getUserName, setUserName]    = useState ('AroliSG');
     const [notLoading, setNotLoading]   = useState <boolean|null>(false);
-    const [getUserName, setUserName]    = useState ('');
-    const [getUserData, setUserData]    = useState <axiosTypes> ();
-    const [getReposData, setReposData]  = useState <axiosTypes[]> ();
+    const [getUserData, setUserData]    = useState <axiosDataTypes['user']> ();
+    const [getReposData, setReposData]  = useState <axiosDataTypes['repos']> ();
 
     const styles:{[key:string]:CSSProperties} = {
         container: {
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'center',
-            alignItems: 'center',
+ 
         },
         parent: {
             backgroundColor: 'pink',
             width: "50vw",
-            height: '50vh',
             marginTop: '50px',
-            borderRadius: '25px',
+            borderRadius: '25px'
         },
         img: {
             height: '150px',
             width: '150px',
-            borderRadius: 75,
+            borderRadius: 75
         },
         labels: {
             fontSize: '1vw',
             margin: 0,
-            marginLeft: 10,
-            color: 'black'
+            marginLeft: 15,
+            color: 'black',
+            fontWeight: 'bold',
         },
         info_container: {
             display: 'flex',
             margin: 15,
+            flexWrap: 'wrap'
         },
         fo_container: {
             display: 'flex',
@@ -84,6 +66,25 @@ const GithubProfiles = () => {
         repo_container: {
             display: 'flex',
             flexWrap: 'wrap',
+            fontSize: '1vw',
+            width: '95%',
+            margin: 15,
+        },
+        input: {
+            backgroundColor: 'pink',
+            borderRadius: 5,
+            padding: 5,
+            fontSize: '1vw',
+            marginTop: 15,
+            outline: 0,
+            color: 'white',
+        },
+        repo_label: {
+            backgroundColor: "#5865F2",
+            margin: 2,
+            padding: 5,
+            borderRadius: 5,
+            textDecoration: 'none'
         }
     }
 
@@ -91,14 +92,14 @@ const GithubProfiles = () => {
         (async () => {
             try {
                 const profile = await axios (`${GITHUB_API}/${getUserName}`);
-                const repos   = await axios (`${GITHUB_API}/${getUserName}/repos?sort=created`);
-
-                setUserData (profile.data as axiosTypes);
-                setReposData (repos.data as any);
+                const repos   = await axios (`${GITHUB_API}/${getUserName}/repos`);
+//
+                setUserData(profile.data as axiosDataTypes['user']);
+                setReposData(repos.data as axiosDataTypes['repos']);
 
                 setNotLoading (true);
 
-                if (profile.data.message) setNotLoading (null);
+                //if (profile.data.message) setNotLoading (null);
             } catch (e) {
                 setNotLoading (null)
             }
@@ -108,8 +109,11 @@ const GithubProfiles = () => {
     return (
         <div style={styles.container}>
             <input
-                onChange={evt => setUserName (evt.target.value)}
+                value       = {getUserName}
+                style       = {styles.input}
+                onChange    = {evt => setUserName (evt.target.value)}
             />
+
             {notLoading ?
                 <div style = {styles.parent}>
                     <div style={styles.info_container}>
@@ -155,14 +159,8 @@ const GithubProfiles = () => {
                             }}>{getUserData?.bio}</p>
                         </div>
                     </div>
-                    <div>
-                        {getReposData?.map (repo => {
-                            return (
-                                <div>
-                                        <p>{repo.name}</p>
-                                </div>
-                            )
-                        })}
+                    <div style = {styles.repo_container}>
+                        {getReposData?.map (repo => <a href = {`https://github.com/${getUserName}/${repo.name}`} style = {styles.repo_label}>{repo.name}</a>)}
                     </div>
                     <p style={styles.labels}>Registered: {getUserData?.created_at}</p>
                 </div>
