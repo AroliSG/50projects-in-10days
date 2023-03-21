@@ -37,7 +37,7 @@ import AnimatedCountDown from './50projects/animatedcountdown';
 
 const Projects: {
     name: string,
-    Element: () => JSX.Element
+    Element: () => any
 }[] = [
     { name: 'Expanding Cards', Element: expandingcards },
     { name: 'Progress Steps', Element: progresssteps },
