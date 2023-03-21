@@ -14,6 +14,9 @@ import {
 import ErrorMessage from './errorMessage';
 import Dashboard from './Dashboard';
 import Projects from './projectList';
+function About() {
+  return (<h2>About</h2>);
+}
 
 function App() {
   useEffect (() => {
@@ -22,22 +25,25 @@ function App() {
 
   return (
     <Routes>
-    <Route path="/" element = {<Navbar />} >
-    <Route index element = {<Dashboard/>} />
-      {Projects.map (list => {
-        const dir = list.name.replace (' ', '').toLocaleLowerCase ();
+      <Route path="/" element = {<Navbar />} >
+        <Route path='/about'>
+          <About/>
+        </Route>
+      <Route index element = {<Dashboard/>} />
+        {Projects.map (list => {
+          const dir = list.name.replace (' ', '').toLocaleLowerCase ();
 
-        return (
-          <Route path={dir} element = {<list.Element/>}/>
-        )
-      })}
+          return (
+            <Route index path={`${process.env.PUBLIC_URL}/50projects-in-10days/${dir}`} element = {<list.Element/>}/>
+          )
+        })}
 
-      {/* Using path="*"" means "match anything", so this route
-            acts like a catch-all for URLs that we don't have explicit
-            routes for. */}
-      <Route path="*" element={<ErrorMessage />} />
-    </Route>
-  </Routes>
+        {/* Using path="*"" means "match anything", so this route
+              acts like a catch-all for URLs that we don't have explicit
+              routes for. */}
+        <Route path={`${process.env.PUBLIC_URL}/50projects-in-10days/*`} element={<ErrorMessage />} />
+      </Route>
+    </Routes>
   );
 }
 
@@ -45,13 +51,13 @@ const Navbar = () => {
   const [dropState, setDropState] = useState (false);
   const [height, setHeight]       = useState(0);
 
-  const div = useCallback((node:any) => {
-    if (node !== null) setHeight(node.getBoundingClientRect().height);
+  const ref = useCallback((evt: HTMLElement | null) => {
+    if (evt !== null) setHeight(evt.getBoundingClientRect().height);
   }, []);
 
   return (
     <div className='container'>
-      <nav className='navbar' ref = {div}>
+      <nav className='navbar' ref = {ref}>
         <i className='Logo' onClick={() => window.location.href = '/'}>50 Projects</i>
 
         <i className = "fa fa-github" onClick={() => {
