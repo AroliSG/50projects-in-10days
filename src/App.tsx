@@ -9,6 +9,7 @@ import {
   Routes,
   Route,
   Outlet,
+  Link,
 } from "react-router-dom";
 
 import ErrorMessage from './errorMessage';
@@ -26,22 +27,19 @@ function App() {
   return (
     <Routes>
       <Route path="/" element = {<Navbar />} >
-        <Route path='/about'>
-          <About/>
-        </Route>
       <Route index element = {<Dashboard/>} />
         {Projects.map (list => {
           const dir = list.name.replace (' ', '').toLocaleLowerCase ();
 
           return (
-            <Route index path={`${process.env.PUBLIC_URL}/50projects-in-10days/${dir}`} element = {<list.Element/>}/>
+            <Route index path={`/#/${dir}`} element = {<list.Element/>}/>
           )
         })}
 
         {/* Using path="*"" means "match anything", so this route
               acts like a catch-all for URLs that we don't have explicit
               routes for. */}
-        <Route path={`${process.env.PUBLIC_URL}/50projects-in-10days/*`} element={<ErrorMessage />} />
+        <Route path={`/#/*`} element={<ErrorMessage />} />
       </Route>
     </Routes>
   );
