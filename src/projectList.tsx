@@ -34,10 +34,16 @@ import PasswordGenerator from './50projects/passwordgenerator';
 import GoodCheapFast from './50projects/good-cheap-fast';
 import NoteApp from './50projects/noteapp';
 import AnimatedCountDown from './50projects/animatedcountdown';
+import ImageCarousel from './50projects/imagecarousel';
+import Hoverboard from './50projects/hoverboard';
+import PokeDex from './50projects/pokedex';
+import MobileTabNavigation from './50projects/mobiletabnavigation';
+import PasswordStrengthBackground from './50projects/passwordstrengthbackground';
+import ThreeDimensionalBoxes from './50projects/3dboxes';
 
 const Projects: {
     name: string,
-    Element: () => any
+    Element: () => JSX.Element
 }[] = [
     { name: 'Expanding Cards', Element: expandingcards },
     { name: 'Progress Steps', Element: progresssteps },
@@ -73,6 +79,12 @@ const Projects: {
     { name: 'G,C,F', Element: GoodCheapFast },
     { name: 'Note App', Element: NoteApp },
     { name: 'Animated Count Down', Element: AnimatedCountDown },
+    { name: 'Image Carousel', Element: ImageCarousel },
+    { name: 'Hoverboard', Element: Hoverboard },
+    { name: 'Poke dex', Element: PokeDex },
+    { name: 'Mobile Tab Navigation', Element: MobileTabNavigation },
+    { name: 'Password Strength Background', Element: PasswordStrengthBackground },
+    { name: '3d Boxes', Element: ThreeDimensionalBoxes },
 ]
 
 export default Projects;

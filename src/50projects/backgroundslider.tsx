@@ -59,7 +59,6 @@ const BackgroundSlider = () => {
         buttons[0].style.opacity = '0';
         buttons[1].style.opacity = '0';
 
-        //evt.currentTarget.style.opacity = '0'
         let timeout = setTimeout (() => {
             buttons[0].style.opacity = '1';
             buttons[1].style.opacity = '1';
