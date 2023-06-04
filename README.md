@@ -2,13 +2,13 @@
 
 # 50projects in 10days
 
-In this project we are going to be creating 50 different projects between 10days
+In this project we are going to be recreating 50 different projects with reactjs app.
 
 List
 
 | #  |         Projects                | Page |
 |----|---------------------------------|------|
-| 01 |       Expanding Cards           | Demo |
+| 01 |       Expanding Cards           | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
 | 02 |       Progress Steps            | Demo |
 | 03 |       Rotating Nav Anim         | Demo |
 | 04 |      Hidden Search Widget       | Demo |
