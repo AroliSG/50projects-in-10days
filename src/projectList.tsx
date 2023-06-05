@@ -9,7 +9,6 @@ import ScrollAnimation from './50projects/scrollanimation';
 import SplitLanding from './50projects/splitlanding';
 import FormWavy from './50projects/formwavy';
 import SoundBoard from './50projects/soundboard';
-import YoMamaJokes from './50projects/randomuser';
 import EventKeycodes from './50projects/eventkeycodes';
 import FaqCollapse from './50projects/faqcollapse';
 import RandomChoicePicker from './50projects/randomchoisespicker';
@@ -40,6 +39,9 @@ import PokeDex from './50projects/pokedex';
 import MobileTabNavigation from './50projects/mobiletabnavigation';
 import PasswordStrengthBackground from './50projects/passwordstrengthbackground';
 import ThreeDimensionalBoxes from './50projects/3dboxes';
+import VerifyCode from './50projects/verifycode';
+import RandomUser from './50projects/randomuser';
+import DadJokes from './50projects/dadjokes';
 
 const Projects: {
     name: string,
@@ -54,7 +56,7 @@ const Projects: {
     { name: 'Split Landing', Element: SplitLanding },
     { name: 'Form Wavy', Element: FormWavy },
     { name: 'Sound Board', Element: SoundBoard },
-    { name: 'Random User', Element: YoMamaJokes },
+    { name: 'Dad Jokes', Element: DadJokes },
     { name: 'Event Keycodes', Element: EventKeycodes} ,
     { name: 'Faq Collapse', Element: FaqCollapse },
     { name: 'Random Choice Picker', Element: RandomChoicePicker },
@@ -85,6 +87,8 @@ const Projects: {
     { name: 'Mobile Tab Navigation', Element: MobileTabNavigation },
     { name: 'Password Strength Background', Element: PasswordStrengthBackground },
     { name: '3d Boxes', Element: ThreeDimensionalBoxes },
+    { name: 'Verify Code', Element: VerifyCode },
+    { name: 'Random User Search', Element: RandomUser },
 ]
 
 export default Projects;

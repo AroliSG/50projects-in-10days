@@ -13,6 +13,8 @@
         "Clickcodes",
         "colours",
         "contentplaceholder",
+        "dadjokes",
+        "dboxes",
         "doubleclickheart",
         "doubleslider",
         "dragndrop",
@@ -52,6 +54,7 @@
         "subbody",
         "tittlebar",
         "toastnotification",
+        "verifycode",
         "yomamajokes",
         "yomomma"
     ]
