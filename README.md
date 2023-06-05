@@ -17,7 +17,7 @@ List
 | 07 |	    Split Landing Page        | [Demo](https://arolisg.github.io/50projects-in-10days/#/splitlanding) |
 | 08 |	    Form Wave	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/formwavy) |
 | 09 |	    Sound Board	              | [Demo](https://arolisg.github.io/50projects-in-10days/#/soundboard) |
-| 10 |	    Dad Jokes	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/randomuser) |
+| 10 |	    Dad Jokes	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/dadjokes) |
 | 11 |	    Event Key codes	          | [Demo](https://arolisg.github.io/50projects-in-10days/#/eventkeycodes) |
 | 12 |	    Faq Collapse	            | [Demo](https://arolisg.github.io/50projects-in-10days/#/faqcollapse) |
 | 13 |	    Random Choice Picker	    | [Demo](https://arolisg.github.io/50projects-in-10days/#/randomchoice%20picker) |
@@ -48,9 +48,9 @@ List
 | 38 |	    Mobile Tab Navigation	    | [Demo](https://arolisg.github.io/50projects-in-10days/#/mobiletab%20navigation) |
 | 39 |	    Password Strength         | [Demo](https://arolisg.github.io/50projects-in-10days/#/passwordstrength%20background) |
 | 40 |	    3d Background Boxes	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/3dboxes) |
-| 41 |	    Verify Account UI	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
-| 42 |	    Live User Filter	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
-| 43 |	    Feedback UI Design	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
+| 41 |	    Verify Account UI	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/verifycode) |
+| 42 |	    Live User Filter	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/randomuser%20search) |
+| 43 |	    Feedback UI Design	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/feedback%20ui) |
 | 44 |	    Custom Range Slider	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
 | 45 |	    Netflix Mobile Nav        | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
 | 46 |	    Quiz App	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
