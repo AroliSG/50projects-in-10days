@@ -8,56 +8,56 @@ List
 
 | #  |         Projects                | Page |
 |----|---------------------------------|------|
-| 01 |       Expanding Cards           | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
-| 02 |       Progress Steps            | Demo |
-| 03 |       Rotating Nav Anim         | Demo |
-| 04 |      Hidden Search Widget       | Demo |
-| 05 |	    Blurry Loading	           | Demo |
-| 06 |	    Scroll Anim      	       | Demo |
-| 07 |	    Split Landing Page         | Demo |
-| 08 |	    Form Wave	               | Demo |
-| 09 |	    Sound Board	               | Demo |
-| 10 |	    Dad Jokes	               | Demo |
-| 11 |	    Event Key codes	           | Demo |
-| 12 |	    Faq Collapse	           | Demo |
-| 13 |	    Random Choice Picker	   | Demo |
-| 14 |	    Animated Navigation	       | Demo |
-| 15 |	    Incrementing Counter	   | Demo |
-| 16 |	    Drink Water	               | Demo |
-| 17 |	    Movie App	               | Demo |
-| 18 |	    Background Slider	       | Demo |
-| 19 |	    Theme Clock	               | Demo |
-| 20 |	    Button Ripple Effect	   | Demo |
-| 21 |	    Drag N Drop	               | Demo |
-| 22 |	    Drawing App	               | Demo |
-| 23 |	    Kinetic Loader	           | Demo |
-| 24 | 	    Content Placeholder	       | Demo |
-| 25 |	    Sticky Navbar	           | Demo |
-| 26 |	    Double Vertical Slider	   | Demo |
-| 27 |	    Toast Notification	       | Demo |
-| 28 |	    Github Profiles	           | Demo |
-| 29 |	    Double Click Heart	       | Demo |
-| 30 |	    Auto Text Effect	       | Demo |
-| 31 |	    Password Generator	       | Demo |
-| 32 |	    Good Cheap Fast	           | Demo |
-| 33 |	    Notes App	               | Demo |
-| 34 |	    Animated Countdown	       | Demo |
-| 35 |	    Image Carousel	           | Demo |
-| 36 |	    Hoverboard	               | Demo |
-| 37 |	    Poke-dex	               | Demo |
-| 38 |	    Mobile Tab Navigation	   | Demo |
-| 39 |	    Password Strength          | Demo |
-| 40 |	    3d Background Boxes	       | Demo |
-| 41 |	    Verify Account UI	       | Demo |
-| 42 |	    Live User Filter	       | Demo |
-| 43 |	    Feedback UI Design	       | Demo |
-| 44 |	    Custom Range Slider	       | Demo |
-| 45 |	    Netflix Mobile Nav         | Demo |
-| 46 |	    Quiz App	               | Demo |
-| 47 |	    Testimonial Box Switcher   | Demo |
-| 48 |	    Random Image Feed	       | Demo |
-| 49 |	    Todo List	               | Demo |
-| 50 |	    Insect Catch Game	       | Demo |
+| 01 |      Expanding Cards           | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
+| 02 |      Progress Steps            | [Demo](https://arolisg.github.io/50projects-in-10days/#/progresssteps) |
+| 03 |      Rotating Nav Anim         | [Demo](https://arolisg.github.io/50projects-in-10days/#/rotatingnavigation) |
+| 04 |      Hidden Search Widget      | [Demo](https://arolisg.github.io/50projects-in-10days/#/hiddensearch) |
+| 05 |	    Blurry Loading	          | [Demo](https://arolisg.github.io/50projects-in-10days/#/burryloading) |
+| 06 |	    Scroll Anim      	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/scrollanimation) |
+| 07 |	    Split Landing Page        | [Demo](https://arolisg.github.io/50projects-in-10days/#/splitlanding) |
+| 08 |	    Form Wave	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/formwavy) |
+| 09 |	    Sound Board	              | [Demo](https://arolisg.github.io/50projects-in-10days/#/soundboard) |
+| 10 |	    Dad Jokes	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/dadjokes) |
+| 11 |	    Event Key codes	          | [Demo](https://arolisg.github.io/50projects-in-10days/#/eventkeycodes) |
+| 12 |	    Faq Collapse	            | [Demo](https://arolisg.github.io/50projects-in-10days/#/faqcollapse) |
+| 13 |	    Random Choice Picker	    | [Demo](https://arolisg.github.io/50projects-in-10days/#/randomchoice%20picker) |
+| 14 |	    Animated Navigation	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/animatednavigation) |
+| 15 |	    Incrementing Counter	    | [Demo](https://arolisg.github.io/50projects-in-10days/#/incrementingcounter) |
+| 16 |	    Drink Water	              | [Demo](https://arolisg.github.io/50projects-in-10days/#/drinkwater) |
+| 17 |	    Movie App	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/movieapp) |
+| 18 |	    Background Slider	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/backgroundslider) |
+| 19 |	    Theme Clock	              | [Demo](https://arolisg.github.io/50projects-in-10days/#/themeclock) |
+| 20 |	    Button Ripple Effect	    | [Demo](https://arolisg.github.io/50projects-in-10days/#/rippleeffect) |
+| 21 |	    Drag N Drop	              | [Demo](https://arolisg.github.io/50projects-in-10days/#/dragn%20drop) |
+| 22 |	    Drawing App	              | [Demo](https://arolisg.github.io/50projects-in-10days/#/drawingapp) |
+| 23 |	    Kinetic Loader	          | [Demo](https://arolisg.github.io/50projects-in-10days/#/kineticloader) |
+| 24 | 	    Content Placeholder	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/contentplaceholder) |
+| 25 |	    Sticky Navbar	            | [Demo](https://arolisg.github.io/50projects-in-10days/#/stickynav) |
+| 26 |	    Double Vertical Slider	  | [Demo](https://arolisg.github.io/50projects-in-10days/#/doubleslider) |
+| 27 |	    Toast Notification	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/toastnotification) |
+| 28 |	    Github Profiles	          | [Demo](https://arolisg.github.io/50projects-in-10days/#/githubprofiles) |
+| 29 |	    Double Click Heart	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/doubleclick%20heart) |
+| 30 |	    Auto Text Effect	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/autotext%20effect) |
+| 31 |	    Password Generator	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/passwordgenerator) |
+| 32 |	    Good Cheap Fast	          | [Demo](https://arolisg.github.io/50projects-in-10days/#/g,c,f) |
+| 33 |	    Notes App	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/noteapp) |
+| 34 |	    Animated Countdown	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/animatedcount%20down) |
+| 35 |	    Image Carousel	          | [Demo](https://arolisg.github.io/50projects-in-10days/#/imagecarousel) |
+| 36 |	    Hoverboard	              | [Demo](https://arolisg.github.io/50projects-in-10days/#/hoverboard) |
+| 37 |	    Poke-dex	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/pokedex) |
+| 38 |	    Mobile Tab Navigation	    | [Demo](https://arolisg.github.io/50projects-in-10days/#/mobiletab%20navigation) |
+| 39 |	    Password Strength         | [Demo](https://arolisg.github.io/50projects-in-10days/#/passwordstrength%20background) |
+| 40 |	    3d Background Boxes	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/3dboxes) |
+| 41 |	    Verify Account UI	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/verifycode) |
+| 42 |	    Live User Filter	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/randomuser%20search) |
+| 43 |	    Feedback UI Design	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/feedback%20ui) |
+| 44 |	    Custom Range Slider	      | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
+| 45 |	    Netflix Mobile Nav        | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
+| 46 |	    Quiz App	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
+| 47 |	    Testimonial Box Switcher  | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
+| 48 |	    Random Image Feed	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
+| 49 |	    Todo List	                | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
+| 50 |	    Insect Catch Game	        | [Demo](https://arolisg.github.io/50projects-in-10days/#/expandingcards) |
 |----|---------------------------------|------|
 | 50 |	    Inspired by [Brad Tra.](https://github.com/bradtraversy/50projects50days)       | :D |
 
