@@ -42,6 +42,7 @@ import ThreeDimensionalBoxes from './50projects/3dboxes';
 import VerifyCode from './50projects/verifycode';
 import RandomUser from './50projects/randomuser';
 import DadJokes from './50projects/dadjokes';
+import FeedbackUI from './50projects/feedbackui';
 
 const Projects: {
     name: string,
@@ -89,6 +90,7 @@ const Projects: {
     { name: '3d Boxes', Element: ThreeDimensionalBoxes },
     { name: 'Verify Code', Element: VerifyCode },
     { name: 'Random User Search', Element: RandomUser },
+    { name: 'Feed Back UI', Element: FeedbackUI },
 ]
 
 export default Projects;
