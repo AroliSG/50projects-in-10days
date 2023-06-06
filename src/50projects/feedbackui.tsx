@@ -7,10 +7,13 @@ const rating = {
     Unsatisfied: "So sorry to hear that! We'll improve for you!"
 }
 const FeedbackUI = () => {
-    const [getFeedback, setFeedback] = useState("none");
+    const [getFeedback, setFeedback] = useState("Satisfied");
     const [getTemplate, setTemplate] = useState(true);
 
-    const onHoverOutEvents = (evt: React.MouseEvent<HTMLDivElement, MouseEvent>) => evt.currentTarget.style.boxShadow = "0px 0px 0px 0px transparent";
+    const onHoverOutEvents = (evt: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        const content = evt.currentTarget.lastChild?.textContent!;
+        if (content !== getFeedback) evt.currentTarget.style.boxShadow = "0px 0px 0px 0px transparent"
+    };
     const onHoverOverEvents = (evt: React.MouseEvent<HTMLDivElement, MouseEvent>) => evt.currentTarget.style.boxShadow = "0px 0px 5px 5px gray";
 
         // feedback content
@@ -24,7 +27,7 @@ const FeedbackUI = () => {
             <p style={styles.title}>Please, rate us. How satisfied are you with our customer support?</p>
             <div style={styles.box_container}>
 
-                <div style={styles.parent} onClick={onClickEvents} onMouseEnter={onHoverOverEvents} onMouseLeave={onHoverOutEvents}>
+                <div className = 'Satisfied' style={styles.parent} onClick={onClickEvents} onMouseEnter={onHoverOverEvents} onMouseLeave={onHoverOutEvents}>
                     <img
                         alt     = "happy"
                         style   = {styles.img}
@@ -33,7 +36,7 @@ const FeedbackUI = () => {
                     <p style={styles.label}>Satisfied</p>
                 </div>
 
-                <div style={styles.parent} onClick={onClickEvents} onMouseEnter={onHoverOverEvents} onMouseLeave={onHoverOutEvents}>
+                <div className = 'Neutral' style={styles.parent} onClick={onClickEvents} onMouseEnter={onHoverOverEvents} onMouseLeave={onHoverOutEvents}>
                     <img
                         alt     = "neutral"
                         style   = {styles.img}
@@ -42,7 +45,7 @@ const FeedbackUI = () => {
                     <p style={styles.label}>Neutral</p>
                 </div>
 
-                <div style={styles.parent} onClick={onClickEvents} onMouseEnter={onHoverOverEvents} onMouseLeave={onHoverOutEvents}>
+                <div className = 'Unsatisfied' style={styles.parent} onClick={onClickEvents} onMouseEnter={onHoverOverEvents} onMouseLeave={onHoverOutEvents}>
                     <img
                         alt     = "unhappy"
                         style   = {styles.img}
@@ -70,7 +73,7 @@ const FeedbackUI = () => {
             <p style={styles.title}>Feedback: {getFeedback}</p>
             <p style={styles.label}>We'll use your feedback to improve our customer support</p>
         </div>
-    )
+    );
 
     return (
         <div>

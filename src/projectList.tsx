@@ -43,6 +43,8 @@ import VerifyCode from './50projects/verifycode';
 import RandomUser from './50projects/randomuser';
 import DadJokes from './50projects/dadjokes';
 import FeedbackUI from './50projects/feedbackui';
+import CustomRange from './50projects/customrange';
+import NetflixMobileNavigation from './50projects/netflixmobilenavigation';
 
 const Projects: {
     name: string,
@@ -91,6 +93,8 @@ const Projects: {
     { name: 'Verify Code', Element: VerifyCode },
     { name: 'Random User Search', Element: RandomUser },
     { name: 'Feed Back UI', Element: FeedbackUI },
+    { name: 'Custom Range', Element: CustomRange },
+    { name: 'Netflix Mobile Navigation', Element: NetflixMobileNavigation },
 ]
 
 export default Projects;
