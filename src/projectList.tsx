@@ -45,6 +45,7 @@ import DadJokes from './50projects/dadjokes';
 import FeedbackUI from './50projects/feedbackui';
 import CustomRange from './50projects/customrange';
 import NetflixMobileNavigation from './50projects/netflixmobilenavigation';
+import QuizApp from './50projects/quizapp';
 
 const Projects: {
     name: string,
@@ -95,6 +96,7 @@ const Projects: {
     { name: 'Feed Back UI', Element: FeedbackUI },
     { name: 'Custom Range', Element: CustomRange },
     { name: 'Netflix Mobile Navigation', Element: NetflixMobileNavigation },
+    { name: 'Quiz App', Element: QuizApp },
 ]
 
 export default Projects;
