@@ -48,7 +48,7 @@ const QuizApp = () => {
                         quiz
                             .sort ()
                             .map (answer => (
-                                <div style = {styles.answerParent}>
+                                <div style = {styles.answerParent} key = {answer}>
 
                                     <input type="checkbox" style={styles.checkbox} />
                                     <p style={styles.answersLabel}>{answer}</p>
